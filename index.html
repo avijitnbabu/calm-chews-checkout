@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calm Chews — Checkout | Wagwell</title>
+<title>Calm Chews Checkout | Wagwell</title>
 <style>
   :root {
     --brand-deep: #1B3A6B;
@@ -372,7 +372,7 @@
             <input type="text" id="cardCvc" placeholder="CVC" disabled>
           </div>
         </div>
-        <div class="placeholder-note">Payment field is a visual placeholder for this build — no processor is wired up.</div>
+        <div class="placeholder-note">Payment field is a visual placeholder for this build. No processor is wired up.</div>
       </div>
     </div>
 
@@ -384,7 +384,7 @@
         <div class="product-block">
           <div class="product-thumb">🦴</div>
           <div>
-            <p class="product-name">Calm Chews — 30-Count Bag</p>
+            <p class="product-name">Calm Chews, 30-Count Bag</p>
             <p class="product-desc">Daily calming soft chew for dogs</p>
           </div>
         </div>
@@ -409,7 +409,7 @@
         <div class="toggle-row">
           <div class="toggle-copy">
             <div class="tt">Subscribe &amp; Save 15%</div>
-            <div class="ts" id="toggle-sub-copy">Cancel or adjust anytime — no commitment.</div>
+            <div class="ts" id="toggle-sub-copy">Cancel or adjust anytime. No commitment.</div>
           </div>
           <label class="switch">
             <input type="checkbox" id="subscribeToggle">
@@ -441,7 +441,7 @@
           </div>
         </div>
 
-        <button type="submit" class="cta-btn desktop-cta" id="cta-desktop">Complete Order — One-Time Purchase</button>
+        <button type="submit" class="cta-btn desktop-cta" id="cta-desktop">Complete Order (One-Time Purchase)</button>
         <div class="trust-line">🔒 Secure checkout · 30-day guarantee</div>
       </div>
     </div>
@@ -452,7 +452,7 @@
       <span>Total</span>
       <strong id="mobile-total">$29.99</strong>
     </div>
-    <button type="submit" form="checkout-form" class="cta-btn" id="cta-mobile">Complete Order — One-Time Purchase</button>
+    <button type="submit" form="checkout-form" class="cta-btn" id="cta-mobile">Complete Order (One-Time Purchase)</button>
   </div>
 
   <footer class="legal">Calm Chews is a supplement and is not intended to diagnose, treat, cure, or prevent any disease. This is a trial-task demo build, not a live store.</footer>
@@ -499,14 +499,14 @@
     mobileTotal.textContent = money(total);
 
     var ctaLabel = state.subscribe
-      ? 'Subscribe & Save — Complete Order'
-      : 'Complete Order — One-Time Purchase';
+      ? 'Complete Order (Subscribe & Save)'
+      : 'Complete Order (One-Time Purchase)';
     ctaDesktop.textContent = ctaLabel;
     ctaMobile.textContent = ctaLabel;
 
     toggleSubCopy.textContent = state.subscribe
       ? 'You’re saving 15% on every delivery. Cancel or adjust anytime.'
-      : 'Cancel or adjust anytime — no commitment.';
+      : 'Cancel or adjust anytime. No commitment.';
   }
 
   qtyOptions.forEach(function (opt) {
@@ -565,7 +565,7 @@
     var emailOk = checkEmail(emailInput);
 
     if (nameOk && addressOk && emailOk) {
-      alert('Demo build — order would be submitted here.\n\n' + lineItemLabel.textContent + '\nTotal: ' + lineTotal.textContent);
+      alert('Demo build. Order would be submitted here.\n\n' + lineItemLabel.textContent + '\nTotal: ' + lineTotal.textContent);
     } else {
       var firstInvalid = document.querySelector('.has-error input');
       if (firstInvalid) firstInvalid.focus();
